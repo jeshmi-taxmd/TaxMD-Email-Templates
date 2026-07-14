@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+
+    <style>
+      @font-face {
+        font-family: "Inter";
+        font-weight: 400;
+        src: url("font/inter/Inter_18pt-Regular.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Inter";
+        font-weight: 700;
+        src: url("font/inter/Inter_18pt-Bold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: italic;
+        font-weight: 400;
+        src: url("font/inter/Inter_18pt-Italic.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: italic;
+        font-weight: 700;
+        src: url("font/inter/Inter_18pt-BoldItalic.ttf") format("truetype");
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0 solid;
+      }
+
+      @page {
+        size: 157.43mm 222.78mm;
+        font-family: "Inter";
+        margin-top: 15.75pt;
+        margin-left: 18.75pt;
+        margin-right: 18.75pt;
+        margin-bottom: 20pt;
+      }
+
+      body {
+        font-family: "Inter";
+        background: #fff;
+        color: #292929;
+      }
+
+      .invoice-container {
+        padding: 0;
+      }
+
+      .invoice-card {
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        padding: 24px;
+      }
+
+      .header-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+
+      .header-table td.logo-cell {
+        width: 1%;
+        white-space: nowrap;
+        vertical-align: top;
+        padding: 0;
+      }
+
+      .header-table td.meta-cell {
+        width: 99%;
+        text-align: right;
+        vertical-align: top;
+        padding: 0;
+      }
+
+      .logo {
+        width: 131px;
+        height: 37.23px;
+      }
+
+      .invoice-details-table {
+        border-collapse: collapse;
+        width: auto;
+        margin-left: auto;
+        float: right;
+        font-size: 9px;
+        line-height: 12px;
+        font-weight: 400;
+      }
+
+      .invoice-details-table td:first-child {
+        color: #5d5d5d;
+        font-weight: 600;
+        padding-right: 8px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .invoice-details-table td:last-child {
+        color: #5d5d5d;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .billing-box {
+        width: 100%;
+        border: 1px solid #cad5e2;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      .billing-box td {
+        vertical-align: top;
+        width: 50%;
+        padding: 14px 16px;
+        font-size: 9px;
+        line-height: 14px;
+        color: #5d5d5d;
+        font-weight: 400;
+      }
+
+      .billing-label {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 9.3px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #292929;
+        padding-bottom: 10px;
+      }
+
+      .billing-company {
+        color: #013564;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16.27px;
+        padding-bottom: 8px;
+      }
+
+      .billing-customer {
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 16.27px;
+        color: #292929;
+        padding-bottom: 8px;
+      }
+
+      .billing-to {
+        text-align: right;
+      }
+
+      .bill-info-wrap {
+        border: 1px solid #cad5e2;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .bill-info {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9.3px;
+      }
+
+      .bill-info th {
+        background-color: #f5f7fa;
+        color: #0a2540;
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 8px;
+        border-bottom: 1px solid #cad5e2;
+      }
+
+      .bill-info tbody {
+        min-height: 180px;
+      }
+
+      .bill-info th.description-col {
+        text-align: left;
+      }
+
+      .bill-info th.units-col {
+        text-align: center;
+      }
+
+      .bill-info td {
+        border-left: 1px solid #cad5e2;
+        border-top: 1px solid #cad5e2;
+        vertical-align: top;
+        padding: 10px 8px;
+        font-size: 9px;
+        color: #292929;
+      }
+
+      .bill-info td:first-child,
+      .bill-info th:first-child {
+        border-left: none;
+      }
+
+      .bill-info td.description {
+        text-align: left;
+      }
+
+      .bill-info td.description .item-title {
+        font-weight: 700;
+        display: block;
+      }
+
+      .bill-info td.description .item-description {
+        font-size: 8px;
+        font-weight: 400;
+        color: #5d5d5d;
+        display: block;
+        margin-top: 4px;
+      }
+
+      .bill-info td.units-col {
+        text-align: center;
+      }
+
+      .bill-info td.price-col,
+      .bill-info td.amount-col {
+        text-align: center;
+      }
+
+      .summary-section {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9px;
+        line-height: 14px;
+      }
+
+      .summary-section td {
+        vertical-align: top;
+        padding: 0;
+      }
+
+      .summary-section td.terms-col {
+        width: 55%;
+        padding-right: 20px;
+        padding-top: 48px;
+      }
+
+      .terms-heading {
+        font-size: 10px;
+        font-weight: 700;
+        color: #292929;
+        padding-bottom: 8px;
+      }
+
+      .terms-text {
+        font-size: 8px;
+        line-height: 13px;
+        color: #5d5d5d;
+        font-weight: 400;
+      }
+
+      .totals-label {
+        text-align: left;
+        font-weight: 600;
+        color: #5d5d5d;
+        padding: 2px 0;
+        white-space: nowrap;
+      }
+
+      .totals-value {
+        text-align: right;
+        color: #5d5d5d;
+        padding: 2px 0;
+        white-space: nowrap;
+      }
+
+      .summary-section tr.totals-gap-top td {
+        padding-top: 10px;
+      }
+
+      .summary-section tr.total-bold td {
+        font-weight: 700;
+        color: #292929;
+      }
+
+      .summary-section tr.totals-spacer td {
+        height: 10px;
+        padding: 0;
+        line-height: 0;
+        font-size: 0;
+      }
+
+      .summary-section tr.amount-remaining td {
+        background: #e8f5e9;
+        color: #166534;
+        font-weight: 700;
+        padding: 6px 8px;
+      }
+
+      .summary-section tr.amount-remaining td:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+
+      .summary-section tr.amount-remaining td:last-child {
+        border-radius: 0 4px 4px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <div class="invoice-card">
+        <table class="header-table">
+          <tr>
+            <td class="logo-cell">
+              <img src="assets/TaxMD-logo.png" alt="TaxMD Logo" class="logo" />
+            </td>
+            <td class="meta-cell" align="right" valign="top">
+              <table class="invoice-details-table" align="right">
+                <tr>
+                  <td>Invoice no.:</td>
+                  <td>{{invoiceNumber}}</td>
+                </tr>
+                <tr>
+                  <td>Billed Date:</td>
+                  <td>{{billedDate}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <table class="billing-box">
+          <tr>
+            <td>
+              <p class="billing-label">Billed By</p>
+              <p class="billing-company">TaxMD™</p>
+              <p>+1 800-522-6091</p>
+              <p>clients@taxmd.com</p>
+              <p>456 Elm Street, Suite 3</p>
+              <p>Los Angeles, CA 90001</p>
+              <p>USA</p>
+            </td>
+            <td class="billing-to">
+              <p class="billing-label">Billed To</p>
+              <p class="billing-customer">{{customerName}}</p>
+              <p>{{customerEmail}}</p>
+              <p>{{customerPhone}}</p>
+              <p>{{customerAddress}}</p>
+            </td>
+          </tr>
+        </table>
+
+        <div class="bill-info-wrap">
+          <table class="bill-info">
+            <thead>
+              <tr>
+                <th class="description-col">Description</th>
+                <th class="units-col">Units</th>
+                <th class="price-col">Price</th>
+                <th class="amount-col">Amount (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="description">
+                  <span class="item-title">{{ item.name }}</span>
+                  <span class="item-description"
+                    >{{ item.current_period_start }} - {{
+                    item.current_period_end }}</span
+                  >
+                </td>
+                <td class="units-col">{{ item.quantity }}</td>
+                <td class="price-col">${{ item.unit_price }}</td>
+                <td class="amount-col">${{ item.total_price }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <table class="summary-section">
+          <tr>
+            <td class="terms-col" rowspan="6">
+              <p class="terms-heading">Terms</p>
+              <p class="terms-text">
+                Full payment is due upon receipt. Late payment may incur
+                <br />
+                additional charges or interest as per the applicable laws.
+              </p>
+            </td>
+            <td class="totals-label">Subtotal</td>
+            <td class="totals-value">${{subtotal}}</td>
+          </tr>
+          <tr class="totals-gap-top">
+            <td class="totals-label">Amount discounted</td>
+            <td class="totals-value">${{discount_amount}}</td>
+          </tr>
+          <tr class="totals-gap-top total-bold">
+            <td class="totals-label">Total amount discounted</td>
+            <td class="totals-value">${{amount_total}}</td>
+          </tr>
+
+          <tr class="totals-spacer">
+            <td colspan="2"></td>
+          </tr>
+          <tr class="amount-remaining">
+            <td class="totals-label">Amount Paid</td>
+            <td class="totals-value">${{subtotal}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
