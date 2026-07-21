@@ -377,7 +377,8 @@
                   <span class="item-title">{{ item.name }}</span>
                   <span class="item-description"
                     >{{ item.current_period_start }} - {{
-                    item.current_period_end }}</span
+                    item.current_period_end }} ({{
+                    billing.products[0].prices[0].price_type }})</span
                   >
                 </td>
                 <td class="units-col">{{ item.quantity }}</td>
