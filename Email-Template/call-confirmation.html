@@ -186,7 +186,7 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -199,7 +199,7 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -218,7 +218,7 @@
                   <p
                     style="
                       margin: 0 0 4px 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -228,37 +228,11 @@
                   >
                     Here are the details for your upcoming call:
                   </p>
-                  <p
-                    style="
-                      margin: 0 0 0px 0;
-                      font-size: 14px;
-                      line-height: 21px;
-                      color: #000000;
-                      font-weight: 400;
-                      font-family:
-                        &quot;Inter&quot;, Arial, Helvetica, sans-serif;
-                    "
-                  >
-                    Date: {{demo_date}}
-                  </p>
-                  <p
-                    style="
-                      margin: 0 0 4px 0;
-                      font-size: 14px;
-                      line-height: 21px;
-                      color: #000000;
-                      font-weight: 400;
-                      font-family:
-                        &quot;Inter&quot;, Arial, Helvetica, sans-serif;
-                    "
-                  >
-                    Time: {{time}} ({{time_zone}})
-                  </p>
-
-                  <p
+                  <ul
                     style="
                       margin: 0 0 12px 0;
-                      font-size: 14px;
+                      padding: 0 0 0 20px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -266,13 +240,22 @@
                         &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                     "
                   >
-                    Session:
-                    <span style="color: #0072da; font-weight: 700">Tax</span
-                    ><span style="color: #004d91; font-weight: 700"
-                      >MD&trade;</span
-                    >
-                    Product Demo and Strategy Consultation
-                  </p>
+                    <li style="margin: 0 0 4px 0; padding: 0">
+                      <span style="font-weight: 600">Date:</span> {{demo_date}}
+                    </li>
+                    <li style="margin: 0 0 4px 0; padding: 0">
+                      <span style="font-weight: 600">Time:</span> {{time}}
+                      ({{time_zone}})
+                    </li>
+                    <li style="margin: 0; padding: 0">
+                      Session:
+                      <span style="color: #0072da; font-weight: 700">Tax</span
+                      ><span style="color: #004d91; font-weight: 700"
+                        >MD&trade;</span
+                      >
+                      Product Demo and Strategy Consultation
+                    </li>
+                  </ul>
 
                   <table
                     width="100%"
@@ -287,10 +270,10 @@
                         <p
                           style="
                             margin: 0 0 0 0;
-                            font-size: 14px;
+                            font-size: 16px;
                             line-height: 21px;
                             color: #000000;
-                            font-weight: 400;
+                            font-weight: 600;
                             font-family:
                               &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                           "
@@ -300,9 +283,9 @@
                         <p
                           style="
                             margin: 0 0 0 0;
-                            font-size: 14px;
+                            font-size: 16px;
                             line-height: 21px;
-                            color: #000000;
+                            color: #0072da;
                             font-weight: 400;
                             font-family:
                               &quot;Inter&quot;, Arial, Helvetica, sans-serif;
@@ -312,8 +295,8 @@
                         </p>
                         <p
                           style="
-                            margin: 0 0 0 0;
-                            font-size: 14px;
+                            margin: 16px 0 16px 0;
+                            font-size: 16px;
                             line-height: 21px;
                             color: #000000;
                             font-weight: 400;
@@ -327,7 +310,7 @@
                         <p
                           style="
                             margin: 0 0 0 0;
-                            font-size: 14px;
+                            font-size: 16px;
                             line-height: 21px;
                             color: #000000;
                             font-weight: 400;
@@ -346,7 +329,7 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -365,7 +348,7 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -378,7 +361,7 @@
                   <p
                     style="
                       margin: 12px 0 0 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       color: #000000;
                       font-weight: 400;
@@ -393,7 +376,7 @@
                       color: #000000;
                       font-weight: 600;
                       margin: 0;
-                      font-size: 14px;
+                      font-size: 16px;
                       line-height: 21px;
                       font-family:
                         &quot;Inter&quot;, Arial, Helvetica, sans-serif;
@@ -439,8 +422,8 @@
                               &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                           "
                         >
-                          Explore strategies and resources that &amp;<br />
-                          help you reduce taxes and build wealth.
+                          Explore strategies and resources that help you reduce
+                          taxes and build wealth.
                         </p>
                         <table
                           border="0"
