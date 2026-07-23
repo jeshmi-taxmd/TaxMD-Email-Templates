@@ -14,12 +14,13 @@ app.post("/send-test", async (req, res) => {
     html = html
       .replace(/{{first_name}}/g, "Preeti")
       .replace(/{{expiry_date}}/g, "March 15, 2026")
-      .replace(/{{plan_name}}/g, "Free Trial Plan")
+      .replace(/{{invoice_number}}/g, "1234567890")
       .replace(
         /{{upgrade_url}}/g,
         "https://investorfriendlycpa.monday.com/boards/18395018809/views/234736140",
       )
-      .replace(/{{current_year}}/g, new Date().getFullYear());
+      .replace(/{{current_year}}/g, new Date().getFullYear())
+      .replace(/{{amount_due}}/g, "$100");
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -31,7 +32,7 @@ app.post("/send-test", async (req, res) => {
 
     await transporter.sendMail({
       from: '"TaxMD Test" <' + process.env.EMAIL_USER + ">",
-      to: "jeshmi@taxmd.com",
+      to: "rajakjeshmi@gmail.com",
       subject: "Test Email Template",
       html,
     });
