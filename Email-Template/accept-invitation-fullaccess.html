@@ -8,7 +8,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invitation for Collaboration - TaxMD</title>
+    <title>Invitation For Collaboration - TaxMD</title>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+    <!--[if !mso]><!-->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -16,6 +25,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
     </style>
+    <!--<![endif]-->
     <style>
       body {
         margin: 0;
@@ -53,41 +63,66 @@
         width: 100%;
         max-width: 600px;
         background-color: #f8fafc;
-        border: 1px solid #e2e8f0;
         border-radius: 8px;
       }
-      .content-padding {
-        padding-left: 40px;
-        padding-right: 40px;
+
+      a.support-link {
+        text-decoration: none !important;
       }
-      @media screen and (max-width: 600px) {
+      a.support-link:hover {
+        text-decoration: underline !important;
+      }
+      @media screen and (max-width: 620px) {
+        .outer-pad {
+          padding: 20px 12px !important;
+        }
         .main {
           width: 100% !important;
+          max-width: 100% !important;
         }
-        .content-padding {
+        .logo-pad,
+        .title-pad {
           padding-left: 20px !important;
           padding-right: 20px !important;
+        }
+        .content-block {
+          padding: 0 20px 24px 20px !important;
         }
         .stack-column {
           display: block !important;
           width: 100% !important;
+          max-width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          padding-bottom: 12px !important;
+          box-sizing: border-box !important;
         }
-        .content-block {
-          padding: 24px 20px 16px 20px !important;
-        }
-        .footer-block {
-          padding: 16px 20px 12px 20px !important;
+        .stack-column-spacer {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          font-size: 0 !important;
+          line-height: 0 !important;
+          mso-hide: all;
         }
         .social-cell {
           padding: 0 4px !important;
         }
-        .footer-link-cell {
-          display: block !important;
-          text-align: center !important;
-          padding: 4px 0 !important;
-        }
       }
     </style>
+    <!--[if mso]>
+      <style type="text/css">
+        body,
+        table,
+        td,
+        a,
+        p,
+        strong,
+        span {
+          font-family: Arial, Helvetica, sans-serif !important;
+        }
+      </style>
+    <![endif]-->
   </head>
   <body>
     <center class="wrapper">
@@ -100,23 +135,30 @@
         bgcolor="#ffffff"
       >
         <tr>
-          <td align="center" style="padding: 40px 10px">
+          <td class="outer-pad" align="center" style="padding: 40px 10px">
             <table
-              width="100%"
+              width="600"
               border="0"
               cellpadding="0"
               cellspacing="0"
               role="presentation"
               class="main"
               style="
+                width: 100%;
                 max-width: 600px;
                 background-color: #f8fafc;
                 border: 1px solid #e7e7e7;
                 border-collapse: separate;
+                border-spacing: 0;
               "
             >
+              <!-- LOGO -->
               <tr>
-                <td align="center" style="padding: 32px 32px 16px 32px">
+                <td
+                  class="logo-pad"
+                  align="center"
+                  style="padding: 32px 32px 16px 32px"
+                >
                   <img
                     src="https://assets.dev.taxmd.com/image/logo.png"
                     alt="TaxMD Logo"
@@ -125,8 +167,14 @@
                   />
                 </td>
               </tr>
+
+              <!-- TITLE -->
               <tr>
-                <td align="center" style="padding: 0 40px 24px 40px">
+                <td
+                  class="title-pad"
+                  align="center"
+                  style="padding: 0 32px 24px 32px"
+                >
                   <h1
                     style="
                       margin: 0;
@@ -134,27 +182,29 @@
                       line-height: 32px;
                       color: #000000;
                       font-weight: 700;
-                      font-family: Arial, Helvetica, sans-serif;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
                     "
                   >
-                    Invitation for collaboration
+                    Invitation For Collaboration
                   </h1>
                 </td>
               </tr>
+
+              <!-- BODY -->
               <tr>
                 <td
                   class="content-block"
-                  style="padding: 0 40px 16px 40px"
+                  style="padding: 0 32px 32px 32px"
                   align="left"
                 >
                   <p
                     style="
-                      margin: 0 0 16px 0;
+                      margin: 0 0 10px 0;
                       font-size: 16px;
                       line-height: 24px;
                       color: #4f4f4f;
                       font-weight: 400;
-                      font-family: Arial, Helvetica, sans-serif;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
                     "
                   >
                     Dear Collaborator,
@@ -166,42 +216,31 @@
                       line-height: 24px;
                       color: #4f4f4f;
                       font-weight: 400;
-                      font-family: Arial, Helvetica, sans-serif;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
                     "
                   >
-                    You’ve been invited to collaborate on a workspace by
                     <span style="font-weight: 600; color: #000000"
                       >{{inviter_name}}</span
-                    >.
+                    >
+                    has invited you to collaborate on multiple tax plans within
+                    their workspace.
                   </p>
                   <p
                     style="
-                      margin: 0 0 24px 0;
+                      margin: 0 0 12px 0;
                       font-size: 16px;
                       line-height: 24px;
                       color: #4f4f4f;
                       font-weight: 400;
-                      font-family: Arial, Helvetica, sans-serif;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
                     "
                   >
-                    This invitation grants you full access to the workspace,
-                    including all tax plans, documents, and related financial
-                    details. You’ll be able to view, edit, and collaborate
-                    across the entire workspace.
+                    A TaxMD™ account needs to be created for this collaboration.
+                    You can create a new account and get access to work on the
+                    assigned tax plan immediately using the link below.
                   </p>
-                  <p
-                    style="
-                      margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 24px;
-                      color: #4f4f4f;
-                      font-weight: 400;
-                      font-family: Arial, Helvetica, sans-serif;
-                    "
-                  >
-                    To get started, you'll need to create an account using this
-                    email address.
-                  </p>
+
+                  <!-- PLANS BOX -->
                   <table
                     width="100%"
                     border="0"
@@ -210,9 +249,10 @@
                     role="presentation"
                     style="
                       background-color: #ffffff;
-                      border: 1px solid #e7e7e7;
-                      border-radius: 4px;
+                      border: 1px solid #e2e8f0;
+                      border-radius: 12px;
                       border-collapse: separate;
+                      border-spacing: 0;
                       margin-bottom: 24px;
                     "
                   >
@@ -220,16 +260,15 @@
                       <td style="padding: 20px">
                         <p
                           style="
-                            margin: 0 0 16px 0;
+                            margin: 0 0 12px 0;
                             font-size: 16px;
                             line-height: 20px;
                             color: #4f4f4f;
                             font-weight: 400;
-                            font-family:
-                              &quot;Inter&quot;, Arial, Helvetica, sans-serif;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
                           "
                         >
-                          What you'll have access to:
+                          You have been invited for the following plans:
                         </p>
                         <table
                           width="100%"
@@ -237,106 +276,189 @@
                           cellpadding="0"
                           cellspacing="0"
                           role="presentation"
+                          style="border-collapse: separate; border-spacing: 0"
                         >
+                          <!-- Backend: replace example rows below with {{plans_html}} -->
                           <tr>
-                            <td
-                              width="24"
-                              valign="top"
-                              style="padding: 0 0 12px 0"
-                            >
-                              <img
-                                src="https://assets.dev.taxmd.com/image/check.png"
-                                alt="check"
-                                width="14"
-                                height="14"
-                                style="
-                                  background-color: #5e951b;
-                                  border-radius: 50%;
-                                  padding: 2px;
-                                "
-                              />
-                            </td>
-                            <td
-                              style="
-                                padding: 0 0 12px 10px;
-                                font-size: 16px;
-                                line-height: 20px;
-                                color: #4f4f4f;
-                                font-weight: 400;
-                                font-family:
-                                  &quot;Inter&quot;, Arial, Helvetica,
-                                  sans-serif;
-                              "
-                            >
-                              Full workspace access
+                            <td style="padding: 12px 0">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    width="28"
+                                    valign="middle"
+                                    style="padding-right: 10px"
+                                  >
+                                    <img
+                                      src="https://assets.dev.taxmd.com/image/files.png"
+                                      alt=""
+                                      width="16"
+                                      height="18"
+                                      style="display: block"
+                                    />
+                                  </td>
+                                  <td
+                                    valign="middle"
+                                    style="
+                                      font-size: 16px;
+                                      line-height: 20px;
+                                      color: #4f4f4f;
+                                      font-family:
+                                        Inter, Arial, Helvetica, sans-serif;
+                                    "
+                                  >
+                                    Q4 2024 plan
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
                           <tr>
                             <td
-                              width="24"
-                              valign="top"
-                              style="padding: 0 0 12px 0"
-                            >
-                              <img
-                                src="https://assets.dev.taxmd.com/image/check.png"
-                                alt="check"
-                                width="14"
-                                height="14"
-                                style="
-                                  background-color: #5e951b;
-                                  border-radius: 50%;
-                                  padding: 2px;
-                                "
-                              />
-                            </td>
-                            <td
                               style="
-                                padding: 0 0 12px 10px;
-                                font-size: 16px;
-                                line-height: 20px;
-                                color: #4f4f4f;
-                                font-weight: 400;
-                                font-family:
-                                  &quot;Inter&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                padding: 12px 0;
+                                border-top: 1px solid #e7e7e7;
+                                mso-border-top-alt: 1px solid #e7e7e7;
                               "
                             >
-                              All existing and future tax plans
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    width="28"
+                                    valign="middle"
+                                    style="padding-right: 10px"
+                                  >
+                                    <img
+                                      src="https://assets.dev.taxmd.com/image/files.png"
+                                      alt=""
+                                      width="16"
+                                      height="18"
+                                      style="display: block"
+                                    />
+                                  </td>
+                                  <td
+                                    valign="middle"
+                                    style="
+                                      font-size: 16px;
+                                      line-height: 20px;
+                                      color: #4f4f4f;
+                                      font-family:
+                                        Inter, Arial, Helvetica, sans-serif;
+                                    "
+                                  >
+                                    Rob&rsquo;s Tax Plan New
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
                           <tr>
-                            <td width="24" align="top">
-                              <img
-                                src="https://assets.dev.taxmd.com/image/check.png"
-                                alt="check"
-                                width="14"
-                                height="14"
-                                style="
-                                  background-color: #5e951b;
-                                  border-radius: 50%;
-                                  padding: 2px;
-                                "
-                              />
-                            </td>
                             <td
                               style="
-                                padding: 0 0 0 10px;
-                                font-size: 16px;
-                                line-height: 20px;
-                                color: #4f4f4f;
-                                font-weight: 400;
-                                font-family:
-                                  &quot;Inter&quot;, Arial, Helvetica,
-                                  sans-serif;
+                                padding: 12px 0 0 0;
+                                border-top: 1px solid #e7e7e7;
+                                mso-border-top-alt: 1px solid #e7e7e7;
                               "
                             >
-                              Shared documents and collaboration tools
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    width="28"
+                                    valign="middle"
+                                    style="padding-right: 10px"
+                                  >
+                                    <img
+                                      src="https://assets.dev.taxmd.com/image/files.png"
+                                      alt=""
+                                      width="16"
+                                      height="18"
+                                      style="display: block"
+                                    />
+                                  </td>
+                                  <td
+                                    valign="middle"
+                                    style="
+                                      font-size: 16px;
+                                      line-height: 20px;
+                                      color: #4f4f4f;
+                                      font-family:
+                                        Inter, Arial, Helvetica, sans-serif;
+                                    "
+                                  >
+                                    Testing Strategies_2026
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
                         </table>
                       </td>
                     </tr>
                   </table>
+
+                  <!-- NOTE BOX -->
+                  <table
+                    width="100%"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    bgcolor="#eef2f7"
+                    style="
+                      background-color: #eef2f7;
+                      border-radius: 12px;
+                      margin-bottom: 24px;
+                    "
+                  >
+                    <tr>
+                      <td style="padding: 16px 20px">
+                        <p
+                          style="
+                            margin: 0 0 8px 0;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #4f4f4f;
+                            font-weight: 500;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                          "
+                        >
+                          Note from {{inviter_name}}
+                        </p>
+                        <p
+                          style="
+                            margin: 0;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #4f4f4f;
+                            font-weight: 400;
+                            font-style: italic;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                          "
+                        >
+                          &ldquo;{{invitation_note}}&rdquo;
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- EXPIRY CARDS -->
                   <table
                     width="100%"
                     border="0"
@@ -347,10 +469,188 @@
                   >
                     <tr>
                       <td
+                        class="stack-column"
+                        width="50%"
+                        valign="top"
+                        style="padding: 0 8px 0 0"
+                      >
+                        <table
+                          width="100%"
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          style="
+                            background-color: #ffffff;
+                            border: 1px solid #e2e8f0;
+                            border-radius: 12px;
+                            border-collapse: separate;
+                          "
+                        >
+                          <tr>
+                            <td style="padding: 12px 20px">
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-size: 16px;
+                                  line-height: 20px;
+                                  color: #4f4f4f;
+                                  font-weight: 400;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                Invitation link expires
+                              </p>
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-size: 20px;
+                                  line-height: 32px;
+                                  color: #005ab0;
+                                  font-weight: 700;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                {{invitation_expiry_days}} Days
+                              </p>
+                              <p
+                                style="
+                                  margin: 0;
+                                  font-size: 12px;
+                                  line-height: 16px;
+                                  color: #4f4f4f;
+                                  font-weight: 400;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                After this, the invitation link will no longer
+                                be valid.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td
+                        class="stack-column-spacer"
+                        width="16"
+                        style="font-size: 0; line-height: 0"
+                      >
+                        &nbsp;
+                      </td>
+                      <td
+                        class="stack-column"
+                        width="50%"
+                        valign="top"
+                        style="padding: 0 0 0 8px"
+                      >
+                        <table
+                          width="100%"
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          style="
+                            background-color: #ffffff;
+                            border: 1px solid #e2e8f0;
+                            border-radius: 12px;
+                            border-collapse: separate;
+                          "
+                        >
+                          <tr>
+                            <td style="padding: 12px 20px">
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-size: 16px;
+                                  line-height: 20px;
+                                  color: #4f4f4f;
+                                  font-weight: 400;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                Collaboration Access Expires
+                              </p>
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-size: 20px;
+                                  line-height: 32px;
+                                  color: #005ab0;
+                                  font-weight: 700;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                {{collaboration_expiry_days}} Days
+                              </p>
+                              <p
+                                style="
+                                  margin: 0;
+                                  font-size: 12px;
+                                  line-height: 16px;
+                                  color: #4f4f4f;
+                                  font-weight: 400;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                Your access to the shared plans will end after
+                                this period.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- CTA -->
+                  <table
+                    width="100%"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="margin-bottom: 16px"
+                  >
+                    <tr>
+                      <td
                         align="center"
                         bgcolor="#044b94"
                         style="border-radius: 4px"
                       >
+                        <!--[if mso]>
+                          <v:roundrect
+                            xmlns:v="urn:schemas-microsoft-com:vml"
+                            xmlns:w="urn:schemas-microsoft-com:office:word"
+                            href="{{accept_link}}"
+                            style="
+                              height: 48px;
+                              v-text-anchor: middle;
+                              width: 520px;
+                            "
+                            arcsize="12%"
+                            stroke="f"
+                            fillcolor="#044b94"
+                          >
+                            <w:anchorlock />
+                            <center
+                              style="
+                                color: #ffffff;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 16px;
+                                font-weight: 700;
+                              "
+                            >
+                              Access Tax Plan
+                            </center>
+                          </v:roundrect>
+                        <![endif]-->
+                        <!--[if !mso]><!-->
                         <a
                           href="{{accept_link}}"
                           style="
@@ -362,618 +662,648 @@
                             font-weight: 600;
                             color: #ffffff;
                             text-decoration: none;
-                            font-family: Arial, Helvetica, sans-serif;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
                           "
                           >Access Tax Plan</a
                         >
+                        <!--<![endif]-->
                       </td>
                     </tr>
                   </table>
+
+                  <!-- DECLINE -->
                   <table
                     width="100%"
                     border="0"
                     cellpadding="0"
                     cellspacing="0"
                     role="presentation"
-                    style="margin-bottom: 16px"
+                    style="margin-bottom: 24px"
                   >
                     <tr>
-          <td align="center">
-            <table
-              width="100%"
-              border="0"
-              cellpadding="0"
-              cellspacing="0"
-              role="presentation"
-              style="max-width: 600px"
-            >
-              <tr>
-                <td
-                  class="footer-block"
-                  align="center"
-                  style="
-                    background-color: #ffffff;
-                    padding: 14px 20px 18px 20px;
-                    text-align: center;
-                  "
-                >
-<table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    role="presentation"
-                    align="center"
-                    style="margin: 0 auto 20px auto"
-                  >
-                    <tr>
-                      <td
-                        style="
-                          padding: 0 8px;
-                          white-space: nowrap;
-                          font-size: 14px;
-                          line-height: 20px;
-                          font-family: Arial, Helvetica, sans-serif;
-                        "
-                      >
+                      <td align="center">
                         <a
-                          href="mailto:support@taxmd.com"
-                          style="
-                            color: #686868;
-                            text-decoration: underline;
-                            font-size: 14px;
-                            line-height: 20px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: 400;
-                            mso-line-height-rule: exactly;
-                          "
-                          ><span
-                            style="
-                              color: #686868;
-                              text-decoration: underline;
-                              font-family: Arial, Helvetica, sans-serif;
-                              font-size: 14px;
-                            "
-                            >Help</span
-                          ></a
+                          href="{{decline_link}}"
+                          style="text-decoration: none; display: inline-block"
                         >
-                      </td>
-                      <td
-                        style="
-                          padding: 0 8px;
-                          white-space: nowrap;
-                          font-size: 14px;
-                          line-height: 20px;
-                          font-family: Arial, Helvetica, sans-serif;
-                        "
-                      >
-                        <a
-                          href="https://dev.taxmd.com/terms-condition"
-                          style="
-                            color: #686868;
-                            text-decoration: underline;
-                            font-size: 14px;
-                            line-height: 20px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: 400;
-                            mso-line-height-rule: exactly;
-                          "
-                          ><span
-                            style="
-                              color: #686868;
-                              text-decoration: underline;
-                              font-family: Arial, Helvetica, sans-serif;
-                              font-size: 14px;
-                            "
-                            >Terms and Conditions</span
-                          ></a
-                        >
-                      </td>
-                      <td
-                        style="
-                          padding: 0 8px;
-                          white-space: nowrap;
-                          font-size: 14px;
-                          line-height: 20px;
-                          font-family: Arial, Helvetica, sans-serif;
-                        "
-                      >
-                        <a
-                          href="https://dev.taxmd.com/privacy-policy"
-                          style="
-                            color: #686868;
-                            text-decoration: underline;
-                            font-size: 14px;
-                            line-height: 20px;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-weight: 400;
-                            mso-line-height-rule: exactly;
-                          "
-                          ><span
-                            style="
-                              color: #686868;
-                              text-decoration: underline;
-                              font-family: Arial, Helvetica, sans-serif;
-                              font-size: 14px;
-                            "
-                            >Privacy Policy</span
-                          ></a
-                        >
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                          >
+                            <tr>
+                              <td style="padding-right: 8px" valign="middle">
+                                <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                >
+                                  <tr>
+                                    <img
+                                      src="https://assets.dev.taxmd.com/image/cross.png"
+                                      alt=""
+                                      width="16"
+                                      height="16"
+                                      style="display: block"
+                                    />
+                                  </tr>
+                                </table>
+                              </td>
+                              <td
+                                valign="middle"
+                                style="
+                                  font-size: 14px;
+                                  line-height: 20px;
+                                  font-weight: 600;
+                                  color: #c80d0d;
+                                  font-family:
+                                    Inter, Arial, Helvetica, sans-serif;
+                                "
+                              >
+                                Decline Invitation
+                              </td>
+                            </tr>
+                          </table>
+                        </a>
                       </td>
                     </tr>
                   </table>
 
-                  <!-- Social icons: VML for Outlook, table-based for all others -->
+                  <!-- CARD FOOTER -->
+                  <p
+                    style="
+                      margin: 0 0 24px 0;
+                      font-size: 16px;
+                      line-height: 20px;
+                      color: #4f4f4f;
+                      font-weight: 400;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                      text-align: center;
+                    "
+                  >
+                    You will only have access to the tax plans included in this
+                    invitation.
+                  </p>
+
                   <table
+                    width="100%"
                     border="0"
                     cellpadding="0"
                     cellspacing="0"
                     role="presentation"
-                    align="center"
-                    style="margin: 0 auto 18px auto"
+                    style="
+                      border-collapse: separate;
+                      border-spacing: 0;
+                      margin-bottom: 24px;
+                    "
                   >
                     <tr>
-                      <!-- FACEBOOK -->
                       <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
+                        style="
+                          line-height: 0;
+                          font-size: 0;
+                          background-color: #e7e7e7;
+                          border-top: 1px solid #e7e7e7;
+                        "
                       >
-                        <!--[if mso]>
-                          <a
-                            href="https://www.facebook.com/people/Taxmd-Tax-Planning-Software/61566044665426/"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                                xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 13px;
-                                  font-weight: bold;
-                                "
-                              >
-                                f
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://www.facebook.com/people/Taxmd-Tax-Planning-Software/61566044665426/"
-                          title="Facebook"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/facebook-logo.png"
-                                  alt="Facebook"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
-                      </td>
-                      <!-- INSTAGRAM -->
-                      <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
-                      >
-                        <!--[if mso]>
-                          <a
-                            href="https://www.instagram.com/taxmd_com/"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                              xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 11px;
-                                  font-weight: bold;
-                                "
-                              >
-                                ig
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://www.instagram.com/taxmd_com/"
-                          title="Instagram"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/instagram-logo.png"
-                                  alt="Instagram"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
-                      </td>
-                      <!-- LINKEDIN -->
-                      <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
-                      >
-                        <!--[if mso]>
-                          <a
-                            href="https://www.linkedin.com/company/taxmd/about/?viewAsMember=true"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                              xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 11px;
-                                  font-weight: bold;
-                                "
-                              >
-                                in
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://www.linkedin.com/company/taxmd/about/?viewAsMember=true"
-                          title="LinkedIn"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/linkedin-logo.png"
-                                  alt="LinkedIn"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
-                      </td>
-                      <!-- YOUTUBE -->
-                      <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
-                      >
-                        <!--[if mso]>
-                          <a
-                            href="https://www.youtube.com/@Tax_MD"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                              xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 11px;
-                                  font-weight: bold;
-                                "
-                              >
-                                yt
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://www.youtube.com/@Tax_MD"
-                          title="YouTube"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/youtube-logo.png"
-                                  alt="YouTube"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
-                      </td>
-                      <!-- TIKTOK -->
-                      <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
-                      >
-                        <!--[if mso]>
-                          <a
-                            href="https://www.tiktok.com/@taxmd0"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                              xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 11px;
-                                  font-weight: bold;
-                                "
-                              >
-                                tt
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://www.tiktok.com/@taxmd0"
-                          title="TikTok"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/tiktok-logo.png"
-                                  alt="TikTok"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
-                      </td>
-                      <!-- X / TWITTER -->
-                      <td
-                        class="social-cell"
-                        style="padding: 0 5px"
-                        align="center"
-                      >
-                        <!--[if mso]>
-                          <a
-                            href="https://x.com/md_tax6390"
-                            style="text-decoration: none; display: inline-block"
-                          >
-                            <v:roundrect
-                              xmlns:v="urn:schemas-microsoft-com:vml"
-                              xmlns:w="urn:schemas-microsoft-com:office:word"
-                              style="
-                                height: 36px;
-                                width: 36px;
-                                v-text-anchor: middle;
-                                display: inline-block;
-                              "
-                              arcsize="11%"
-                              fillcolor="#044b94"
-                              stroke="f"
-                            >
-                              <w:anchorlock />
-                              <center
-                                style="
-                                  color: #ffffff;
-                                  font-family: Arial, sans-serif;
-                                  font-size: 13px;
-                                  font-weight: bold;
-                                "
-                              >
-                                X
-                              </center>
-                            </v:roundrect></a
-                          >
-                        <![endif]-->
-                        <!--[if !mso]><!-->
-                        <a
-                          href="https://x.com/md_tax6390"
-                          title="X"
-                          style="text-decoration: none; display: inline-block"
-                        >
-                          <table
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                            role="presentation"
-                          >
-                            <tr>
-                              <td
-                                align="center"
-                                valign="middle"
-                                style="
-                                  background-color: #044b94;
-                                  border-radius: 4px;
-                                  width: 36px;
-                                  height: 36px;
-                                "
-                              >
-                                <img
-                                  src="https://assets.dev.taxmd.com/image/x-logo.png"
-                                  alt="X"
-                                  width="24"
-                                  height="24"
-                                  style="display: block; margin: 0 auto"
-                                />
-                              </td>
-                            </tr>
-                          </table>
-                        </a>
-                        <!--<![endif]-->
+                        &nbsp;
                       </td>
                     </tr>
                   </table>
 
                   <p
                     style="
-                      margin: 0;
-                      color: #686868;
+                      margin: 0 0 16px 0;
                       font-size: 16px;
-                      line-height: 20px;
+                      line-height: 24px;
+                      color: #4f4f4f;
                       font-weight: 400;
-                      font-family: Arial, Helvetica, sans-serif;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                      text-align: center;
                     "
                   >
-                    &copy; {{current_year}} TaxMD™ LLC &reg;
+                    If you were not expecting this invitation, you can safely
+                    ignore this email.
+                  </p>
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: #4f4f4f;
+                      font-weight: 400;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                      text-align: center;
+                    "
+                  >
+                    Need help?
+                    <a
+                      class="support-link"
+                      href="mailto:support@taxmd.com"
+                      style="
+                        color: #005ab0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        font-family: Inter, Arial, Helvetica, sans-serif;
+                      "
+                      >Contact TaxMD&trade; Support</a
+                    >
                   </p>
                 </td>
               </tr>
             </table>
+          </td>
+        </tr>
+
+        <!-- SITE FOOTER -->
+        <tr>
+          <td align="center" style="padding: 0 10px 40px 10px">
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              style="margin-bottom: 16px"
+            >
+              <tr>
+                <td style="padding: 0 10px">
+                  <a
+                    href="mailto:support@taxmd.com"
+                    style="
+                      font-size: 14px;
+                      color: #b0b0b0;
+                      text-decoration: underline;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                    "
+                    >Help</a
+                  >
+                </td>
+                <td style="padding: 0 10px">
+                  <a
+                    href="https://taxmd.com/terms-condition"
+                    style="
+                      font-size: 14px;
+                      color: #b0b0b0;
+                      text-decoration: underline;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                    "
+                    >Terms and Conditions</a
+                  >
+                </td>
+                <td style="padding: 0 10px">
+                  <a
+                    href="https://taxmd.com/privacy-policy"
+                    style="
+                      font-size: 14px;
+                      color: #b0b0b0;
+                      text-decoration: underline;
+                      font-family: Inter, Arial, Helvetica, sans-serif;
+                    "
+                    >Privacy Policy</a
+                  >
+                </td>
+              </tr>
+            </table>
+
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              align="center"
+              style="margin: 0 auto 16px auto"
+            >
+              <tr>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://www.facebook.com/people/Taxmd-Tax-Planning-Software/61566044665426/"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 13px;
+                            font-weight: bold;
+                          "
+                        >
+                          f
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://www.facebook.com/people/Taxmd-Tax-Planning-Software/61566044665426/"
+                    title="Facebook"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/facebook-logo.png"
+                            alt="Facebook"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://www.instagram.com/taxmd_com/"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 11px;
+                            font-weight: bold;
+                          "
+                        >
+                          ig
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://www.instagram.com/taxmd_com/"
+                    title="Instagram"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/instagram-logo.png"
+                            alt="Instagram"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://www.linkedin.com/company/taxmd/about/?viewAsMember=true"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 11px;
+                            font-weight: bold;
+                          "
+                        >
+                          in
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://www.linkedin.com/company/taxmd/about/?viewAsMember=true"
+                    title="LinkedIn"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/linkedin-logo.png"
+                            alt="LinkedIn"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://www.youtube.com/@Tax_MD"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 11px;
+                            font-weight: bold;
+                          "
+                        >
+                          yt
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://www.youtube.com/@Tax_MD"
+                    title="YouTube"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/youtube-logo.png"
+                            alt="YouTube"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://www.tiktok.com/@taxmd0"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 11px;
+                            font-weight: bold;
+                          "
+                        >
+                          tt
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://www.tiktok.com/@taxmd0"
+                    title="TikTok"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/tiktok-logo.png"
+                            alt="TikTok"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+                <td class="social-cell" style="padding: 0 5px" align="center">
+                  <!--[if mso]>
+                    <a
+                      href="https://x.com/md_tax6390"
+                      style="text-decoration: none; display: inline-block"
+                    >
+                      <v:roundrect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        xmlns:w="urn:schemas-microsoft-com:office:word"
+                        style="
+                          height: 36px;
+                          width: 36px;
+                          v-text-anchor: middle;
+                          display: inline-block;
+                        "
+                        arcsize="11%"
+                        fillcolor="#90a1b9"
+                        stroke="f"
+                      >
+                        <w:anchorlock />
+                        <center
+                          style="
+                            color: #ffffff;
+                            font-family: Inter, Arial, Helvetica, sans-serif;
+                            font-size: 13px;
+                            font-weight: bold;
+                          "
+                        >
+                          X
+                        </center>
+                      </v:roundrect></a
+                    >
+                  <![endif]-->
+                  <!--[if !mso]><!-->
+                  <a
+                    href="https://x.com/md_tax6390"
+                    title="X"
+                    style="text-decoration: none; display: inline-block"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                    >
+                      <tr>
+                        <td
+                          align="center"
+                          valign="middle"
+                          style="
+                            background-color: #90a1b9;
+                            border-radius: 4px;
+                            width: 36px;
+                            height: 36px;
+                          "
+                        >
+                          <img
+                            src="https://assets.dev.taxmd.com/image/x-logo.png"
+                            alt="X"
+                            width="24"
+                            height="24"
+                            style="display: block; margin: 0 auto"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                  <!--<![endif]-->
+                </td>
+              </tr>
+            </table>
+
+            <p
+              style="
+                margin: 0;
+                color: #b0b0b0;
+                font-size: 14px;
+                line-height: 20px;
+                font-family: Inter, Arial, Helvetica, sans-serif;
+              "
+            >
+              &copy; {{current_year}} TaxMD&trade; LLC &reg;
+            </p>
           </td>
         </tr>
       </table>

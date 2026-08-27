@@ -32,7 +32,7 @@ app.post("/send-test", async (req, res) => {
 
     await transporter.sendMail({
       from: '"TaxMD Test" <' + process.env.EMAIL_USER + ">",
-      to: "jeshmi@taxmd.com",
+      to: "ketan.maharjan11@gmail.com",
       subject: "Test Email Template",
       html,
     });
