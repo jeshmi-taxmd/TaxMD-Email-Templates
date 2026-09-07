@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subscription Plan Confirmation Email Template</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
     </style>
     <style>
       body {
@@ -50,7 +50,7 @@
         background-color: #ffffff;
       }
       .main {
-        width: 100%;
+        width: 600px;
         max-width: 600px;
         background-color: #f8fafc;
         border: 1px solid #e2e8f0;
@@ -71,6 +71,7 @@
       @media screen and (max-width: 600px) {
         .main {
           width: 100% !important;
+          max-width: 100% !important;
         }
         .content-padding {
           padding-left: 20px !important;
@@ -146,13 +147,13 @@
         <tr>
           <td align="center" style="padding: 40px 10px">
             <table
-              width="100%"
+              width="600"
               border="0"
               cellpadding="0"
               cellspacing="0"
               role="presentation"
               class="main"
-              style="max-width: 600px; background-color: #f8fafc"
+              style="width: 600px; max-width: 600px; background-color: #f8fafc"
             >
               <tr>
                 <td align="center" style="padding: 24px 20px 10px 20px">
@@ -192,8 +193,8 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
@@ -205,8 +206,8 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
@@ -217,14 +218,14 @@
                     <strong style="color: #0072da; font-weight: 600"
                       >Tax<span style="color: #004d91">MD&trade;</span></strong
                     >
-                    Plan. You will pay ${{amount_per_month}} plus applicable
-                    taxes per month for the next 12 months.
+                    Plan. Your 12-month subscription is now active at
+                    ${{amount_total}} plus applicable taxes.
                   </p>
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
@@ -239,23 +240,22 @@
                     <strong style="color: #0072da; font-weight: 600"
                       >Tax<span style="color: #004d91">MD&trade;</span></strong
                     >
-                    strategy modeling tools, with up to {{strategy_count}}
-                    strategy simulations and {{tax_calculation_count}} tax
-                    calculations runs per month.
+                    strategy modeling tools, strategy simulations and tax
+                    calculations.
                   </p>
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
                         &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                     "
                   >
-                    You will also receive access to up to 2 entity structuring
-                    analyses and 4 advanced tax projection reports per year.
+                    You will also receive access to up to entity structuring
+                    analyses and advanced tax projection reports.
                   </p>
                   <table
                     width="100%"
@@ -266,15 +266,33 @@
                     style="margin-bottom: 24px"
                   >
                     <tr>
-                      <td width="48" valign="top" style="padding: 0 0 20px 0">
+                      <td
+                        width="48"
+                        valign="top"
+                        style="
+                          padding: 0 0 20px 0;
+                          width: 48px;
+                          vertical-align: top;
+                          line-height: 0;
+                          font-size: 0;
+                        "
+                      >
                         <table
                           width="40"
-                          height="40"
                           border="0"
                           cellpadding="0"
                           cellspacing="0"
                           role="presentation"
-                          style="border-collapse: separate"
+                          align="left"
+                          style="
+                            border-collapse: separate;
+                            width: 40px;
+                            min-width: 40px;
+                            max-width: 40px;
+                            height: 40px;
+                            max-height: 40px;
+                            table-layout: fixed;
+                          "
                         >
                           <tr>
                             <td
@@ -282,9 +300,16 @@
                               valign="middle"
                               width="40"
                               height="40"
+                              bgcolor="#eff7ff"
                               style="
                                 width: 40px;
                                 height: 40px;
+                                min-width: 40px;
+                                max-width: 40px;
+                                min-height: 40px;
+                                max-height: 40px;
+                                mso-height-rule: exactly;
+                                line-height: 40px;
                                 background-color: #eff7ff;
                                 border: 1px solid #ddefff;
                                 border-radius: 50%;
@@ -293,13 +318,15 @@
                               "
                             >
                               <img
-                                src="./image/building.png"
+                                src="https://assets.dev.taxmd.com/image/building.png"
                                 alt="Plan"
                                 width="18"
                                 height="18"
                                 style="
                                   width: 18px;
                                   height: 18px;
+                                  max-width: 18px;
+                                  max-height: 18px;
                                   display: block;
                                   margin: 0 auto;
                                 "
@@ -319,8 +346,8 @@
                         <p
                           style="
                             margin: 0 0 4px 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 600;
                             font-family:
@@ -332,8 +359,8 @@
                         <p
                           style="
                             margin: 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 400;
                             font-family:
@@ -345,15 +372,33 @@
                       </td>
                     </tr>
                     <tr>
-                      <td width="48" valign="top" style="padding: 0 0 20px 0">
+                      <td
+                        width="48"
+                        valign="top"
+                        style="
+                          padding: 0 0 20px 0;
+                          width: 48px;
+                          vertical-align: top;
+                          line-height: 0;
+                          font-size: 0;
+                        "
+                      >
                         <table
                           width="40"
-                          height="40"
                           border="0"
                           cellpadding="0"
                           cellspacing="0"
                           role="presentation"
-                          style="border-collapse: separate"
+                          align="left"
+                          style="
+                            border-collapse: separate;
+                            width: 40px;
+                            min-width: 40px;
+                            max-width: 40px;
+                            height: 40px;
+                            max-height: 40px;
+                            table-layout: fixed;
+                          "
                         >
                           <tr>
                             <td
@@ -361,9 +406,16 @@
                               valign="middle"
                               width="40"
                               height="40"
+                              bgcolor="#eff7ff"
                               style="
                                 width: 40px;
                                 height: 40px;
+                                min-width: 40px;
+                                max-width: 40px;
+                                min-height: 40px;
+                                max-height: 40px;
+                                mso-height-rule: exactly;
+                                line-height: 40px;
                                 background-color: #eff7ff;
                                 border: 1px solid #ddefff;
                                 border-radius: 50%;
@@ -372,13 +424,15 @@
                               "
                             >
                               <img
-                                src="./image/strategy.png"
+                                src="https://assets.dev.taxmd.com/image/strategy.png"
                                 alt="Billing"
                                 width="18"
                                 height="18"
                                 style="
                                   width: 18px;
                                   height: 18px;
+                                  max-width: 18px;
+                                  max-height: 18px;
                                   display: block;
                                   margin: 0 auto;
                                 "
@@ -398,8 +452,8 @@
                         <p
                           style="
                             margin: 0 0 4px 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 600;
                             font-family:
@@ -411,29 +465,47 @@
                         <p
                           style="
                             margin: 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 400;
                             font-family:
                               &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                           "
                         >
-                          Monthly billing at ${{amount_per_month}} plus
-                          applicable taxes.
+                          One-time payment of ${{amount_total}} plus applicable
+                          taxes for 12 months of access.
                         </p>
                       </td>
                     </tr>
                     <tr>
-                      <td width="48" valign="top" style="padding: 0 0 20px 0">
+                      <td
+                        width="48"
+                        valign="top"
+                        style="
+                          padding: 0 0 20px 0;
+                          width: 48px;
+                          vertical-align: top;
+                          line-height: 0;
+                          font-size: 0;
+                        "
+                      >
                         <table
                           width="40"
-                          height="40"
                           border="0"
                           cellpadding="0"
                           cellspacing="0"
                           role="presentation"
-                          style="border-collapse: separate"
+                          align="left"
+                          style="
+                            border-collapse: separate;
+                            width: 40px;
+                            min-width: 40px;
+                            max-width: 40px;
+                            height: 40px;
+                            max-height: 40px;
+                            table-layout: fixed;
+                          "
                         >
                           <tr>
                             <td
@@ -441,9 +513,16 @@
                               valign="middle"
                               width="40"
                               height="40"
+                              bgcolor="#eff7ff"
                               style="
                                 width: 40px;
                                 height: 40px;
+                                min-width: 40px;
+                                max-width: 40px;
+                                min-height: 40px;
+                                max-height: 40px;
+                                mso-height-rule: exactly;
+                                line-height: 40px;
                                 background-color: #eff7ff;
                                 border: 1px solid #ddefff;
                                 border-radius: 50%;
@@ -452,13 +531,15 @@
                               "
                             >
                               <img
-                                src="./image/clock.png"
+                                src="https://assets.dev.taxmd.com/image/clock.png"
                                 alt="Renewal"
-                                width="18"
+                                width="15"
                                 height="18"
                                 style="
-                                  width: 18px;
+                                  width: 15px;
                                   height: 18px;
+                                  max-width: 15px;
+                                  max-height: 18px;
                                   display: block;
                                   margin: 0 auto;
                                 "
@@ -478,8 +559,8 @@
                         <p
                           style="
                             margin: 0 0 4px 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 600;
                             font-family:
@@ -491,8 +572,8 @@
                         <p
                           style="
                             margin: 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 400;
                             font-family:
@@ -506,15 +587,32 @@
                       </td>
                     </tr>
                     <tr>
-                      <td width="48" valign="top">
+                      <td
+                        width="48"
+                        valign="top"
+                        style="
+                          width: 48px;
+                          vertical-align: top;
+                          line-height: 0;
+                          font-size: 0;
+                        "
+                      >
                         <table
                           width="40"
-                          height="40"
                           border="0"
                           cellpadding="0"
                           cellspacing="0"
                           role="presentation"
-                          style="border-collapse: separate"
+                          align="left"
+                          style="
+                            border-collapse: separate;
+                            width: 40px;
+                            min-width: 40px;
+                            max-width: 40px;
+                            height: 40px;
+                            max-height: 40px;
+                            table-layout: fixed;
+                          "
                         >
                           <tr>
                             <td
@@ -522,9 +620,16 @@
                               valign="middle"
                               width="40"
                               height="40"
+                              bgcolor="#eff7ff"
                               style="
                                 width: 40px;
                                 height: 40px;
+                                min-width: 40px;
+                                max-width: 40px;
+                                min-height: 40px;
+                                max-height: 40px;
+                                mso-height-rule: exactly;
+                                line-height: 40px;
                                 background-color: #eff7ff;
                                 border: 1px solid #ddefff;
                                 border-radius: 50%;
@@ -533,13 +638,15 @@
                               "
                             >
                               <img
-                                src="./image/file-text.png"
+                                src="https://assets.dev.taxmd.com/image/file-text.png"
                                 alt="Payment"
-                                width="18"
+                                width="15"
                                 height="18"
                                 style="
-                                  width: 18px;
+                                  width: 15px;
                                   height: 18px;
+                                  max-width: 15px;
+                                  max-height: 18px;
                                   display: block;
                                   margin: 0 auto;
                                 "
@@ -559,8 +666,8 @@
                         <p
                           style="
                             margin: 0 0 4px 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 600;
                             font-family:
@@ -572,8 +679,8 @@
                         <p
                           style="
                             margin: 0;
-                            font-size: 16px;
-                            line-height: 21px;
+                            font-size: 14px;
+                            line-height: 20px;
                             color: #000000;
                             font-weight: 400;
                             font-family:
@@ -622,8 +729,8 @@
                   <p
                     style="
                       margin: 0 0 16px 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
@@ -647,8 +754,8 @@
                   <p
                     style="
                       margin: 12px 0 0 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       color: #000000;
                       font-weight: 400;
                       font-family:
@@ -662,8 +769,8 @@
                       color: #000000;
                       font-weight: 600;
                       margin: 0;
-                      font-size: 16px;
-                      line-height: 21px;
+                      font-size: 14px;
+                      line-height: 20px;
                       font-family:
                         &quot;Inter&quot;, Arial, Helvetica, sans-serif;
                     "
@@ -678,17 +785,37 @@
               </tr>
               <!-- BLUE BANNER -->
               <tr>
-              <td style="padding: 0 40px 40px 40px" class="content-padding">
-                 <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
-                    style="background-color: #023564; border-radius: 12px; overflow: hidden; background-image: url(&quot;https://assets.dev.taxmd.com/image/logo.svg&quot;); background-repeat: no-repeat; background-position: right top; background-size: 320px auto;"
-                    background="https://assets.dev.taxmd.com/image/logo.svg">
-                  <tr class="stack-column">
-                    <td class="banner-text-cell" width="60%" valign="middle" style="
+                <td style="padding: 0 40px 40px 40px" class="content-padding">
+                  <table
+                    width="100%"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="
+                      background-color: #023564;
+                      border-radius: 12px;
+                      overflow: hidden;
+                      background-image: url(&quot;https://assets.dev.taxmd.com/image/logo.svg&quot;);
+                      background-repeat: no-repeat;
+                      background-position: right top;
+                      background-size: 320px auto;
+                    "
+                    background="https://assets.dev.taxmd.com/image/logo.svg"
+                  >
+                    <tr class="stack-column">
+                      <td
+                        class="banner-text-cell"
+                        width="60%"
+                        valign="middle"
+                        style="
                           padding: 16px 0 16px 16px;
                           color: #ffffff;
                           text-align: left;
-                        ">
-                      <p style="
+                        "
+                      >
+                        <p
+                          style="
                             margin: 0 0 14px 0;
                             font-size: 14px;
                             line-height: 20px;
@@ -696,172 +823,107 @@
                             color: #ffffff;
                             font-family:
                               &quot;Inter&quot;, Arial, Helvetica, sans-serif;
-                          ">
-                        Explore strategies and resources that<br />help you reduce taxes and build wealth.
-                      </p>
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin-bottom: 12px"
-                        width="100%">
-                        <tr>
-                          <td class="rating-badge" valign="top" width="33%">
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                              <tr>
-                                <td style="padding-bottom: 5px">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td>
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td valign="middle">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td valign="middle" style="padding-right: 4px">
-                                        <img src="https://assets.dev.taxmd.com/image/capterra.png" alt="Capterra"
-                                          width="14" style="
+                          "
+                        >
+                          Explore strategies and resources that<br />help you
+                          reduce taxes and build wealth.
+                        </p>
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          style="margin-bottom: 12px"
+                          width="100%"
+                        >
+                          <tr>
+                            <td class="rating-badge" valign="top" width="33%">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                              >
+                                <tr>
+                                  <td style="padding-bottom: 5px">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td>
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td valign="middle">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td
+                                          valign="middle"
+                                          style="padding-right: 4px"
+                                        >
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/capterra.png"
+                                            alt="Capterra"
+                                            width="14"
+                                            style="
                                               width: 14px;
                                               height: auto;
                                               display: block;
-                                            " />
-                                      </td>
-                                      <td valign="middle" style="
-                                            font-size: 9px;
-                                            line-height: 11px;
-                                            color: #ffffff;
-                                            white-space: nowrap;
-                                            font-family:
-                                              &quot;Inter&quot;, Arial,
-                                              Helvetica, sans-serif;
-                                          ">
-                                        Capterra.com
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                          <td class="rating-badge" valign="top" width="33%">
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                              <tr>
-                                <td style="padding-bottom: 7px">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td>
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td valign="middle">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td valign="middle">
-                                        <img src="https://assets.dev.taxmd.com/image/g2.png" alt="G2" width="20" style="
-                                              width: 20px;
-                                              height: auto;
-                                              display: block;
-                                            " />
-                                      </td>
-                                      <td valign="middle" style="
-                                            font-size: 9px;
-                                            line-height: 11px;
-                                            color: #ffffff;
-                                            white-space: nowrap;
-                                            font-family:
-                                              &quot;Inter&quot;, Arial,
-                                              Helvetica, sans-serif;
-                                          ">
-                                        G2.com
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                          <td class="rating-badge" valign="top" width="33%">
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                              <tr>
-                                <td style="padding-bottom: 2px">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td style="padding-right: 2px">
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                      <td>
-                                        <img src="https://assets.dev.taxmd.com/image/star-fill.png" alt="star"
-                                          width="14" height="14" />
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td valign="middle">
-                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation">
-                                    <tr>
-                                      <td valign="middle">
-                                        <img src="https://assets.dev.taxmd.com/image/getapp.png" alt="GetApp" width="20"
+                                            "
+                                          />
+                                        </td>
+                                        <td
+                                          valign="middle"
                                           style="
-                                              width: 20px;
-                                              height: auto;
-                                              display: block;
-                                            " />
-                                      </td>
-                                      <td valign="middle" style="
                                             font-size: 9px;
                                             line-height: 11px;
                                             color: #ffffff;
@@ -869,63 +931,321 @@
                                             font-family:
                                               &quot;Inter&quot;, Arial,
                                               Helvetica, sans-serif;
-                                          ">
-                                        Getapp.com
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                        <tr>
-                          <td>
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                              <tr>
-                                <td height="1"
-                                  style="font-size: 1px; line-height: 1px; background-color: #D1D1D1; background-image: linear-gradient(90deg, #4F4F4F 0%, #D1D1D1 50%, #4F4F4F 100%);">
-                                  &nbsp;
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding-top: 12px;">
-                            <p style="
+                                          "
+                                        >
+                                          Capterra.com
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td class="rating-badge" valign="top" width="33%">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                              >
+                                <tr>
+                                  <td style="padding-bottom: 7px">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td>
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td valign="middle">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td valign="middle">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/g2.png"
+                                            alt="G2"
+                                            width="20"
+                                            style="
+                                              width: 20px;
+                                              height: auto;
+                                              display: block;
+                                            "
+                                          />
+                                        </td>
+                                        <td
+                                          valign="middle"
+                                          style="
+                                            font-size: 9px;
+                                            line-height: 11px;
+                                            color: #ffffff;
+                                            white-space: nowrap;
+                                            font-family:
+                                              &quot;Inter&quot;, Arial,
+                                              Helvetica, sans-serif;
+                                          "
+                                        >
+                                          G2.com
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td class="rating-badge" valign="top" width="33%">
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                              >
+                                <tr>
+                                  <td style="padding-bottom: 2px">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td style="padding-right: 2px">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                        <td>
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/star-fill.png"
+                                            alt="star"
+                                            width="14"
+                                            height="14"
+                                          />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td valign="middle">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                    >
+                                      <tr>
+                                        <td valign="middle">
+                                          <img
+                                            src="https://assets.dev.taxmd.com/image/getapp.png"
+                                            alt="GetApp"
+                                            width="20"
+                                            style="
+                                              width: 20px;
+                                              height: auto;
+                                              display: block;
+                                            "
+                                          />
+                                        </td>
+                                        <td
+                                          valign="middle"
+                                          style="
+                                            font-size: 9px;
+                                            line-height: 11px;
+                                            color: #ffffff;
+                                            white-space: nowrap;
+                                            font-family:
+                                              &quot;Inter&quot;, Arial,
+                                              Helvetica, sans-serif;
+                                          "
+                                        >
+                                          Getapp.com
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          width="100%"
+                        >
+                          <tr>
+                            <td>
+                              <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                role="presentation"
+                                width="100%"
+                              >
+                                <tr>
+                                  <td
+                                    height="1"
+                                    style="
+                                      font-size: 1px;
+                                      line-height: 1px;
+                                      background-color: #d1d1d1;
+                                      background-image: linear-gradient(
+                                        90deg,
+                                        #4f4f4f 0%,
+                                        #d1d1d1 50%,
+                                        #4f4f4f 100%
+                                      );
+                                    "
+                                  >
+                                    &nbsp;
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-top: 12px">
+                              <p
+                                style="
                                   margin: 0;
                                   font-size: 12px;
                                   line-height: 18px;
                                   color: #ffffff;
                                   font-weight: 500;
                                   font-family:
-                                    &quot;Inter&quot;, Arial, Helvetica, sans-serif;
-                                ">
-                              Trusted By Firms Across The United States
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                    <td class="banner-image-cell" width="40%" valign="middle" align="right"
-                      style="padding: 0 8px 0 0; vertical-align: middle; text-align: right">
-                      <table class="laptop-table" border="0" cellpadding="0" cellspacing="0" role="presentation" align="right" width="220" style="margin: 0">
-                        <tr>
-                          <td align="center" valign="middle" height="130"
-                            style="padding: 10px 0; vertical-align: middle">
-                            <img class="laptop-img" src="https://assets.dev.taxmd.com/image/laptop.svg"
-                              alt="TaxMD Dashboard" width="210" height="120" style="display: block; margin: 0 auto" />
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
+                                    &quot;Inter&quot;, Arial, Helvetica,
+                                    sans-serif;
+                                "
+                              >
+                                Trusted By Firms Across The United States
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td
+                        class="banner-image-cell"
+                        width="40%"
+                        valign="middle"
+                        align="right"
+                        style="
+                          padding: 0 8px 0 0;
+                          vertical-align: middle;
+                          text-align: right;
+                        "
+                      >
+                        <table
+                          class="laptop-table"
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          role="presentation"
+                          align="right"
+                          width="220"
+                          style="margin: 0"
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              valign="middle"
+                              height="130"
+                              style="padding: 10px 0; vertical-align: middle"
+                            >
+                              <img
+                                class="laptop-img"
+                                src="https://assets.dev.taxmd.com/image/laptop.svg"
+                                alt="TaxMD Dashboard"
+                                width="210"
+                                height="120"
+                                style="display: block; margin: 0 auto"
+                              />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
             </table>
             <!-- FOOTER -->
             <table
@@ -1518,7 +1838,7 @@
                       font-family: Arial, Helvetica, sans-serif;
                     "
                   >
-                    &copy; {{current_year}} TaxMD™ LLC &reg;
+                    &copy; {{current_year}} TaxMD™: Tax Planning Software LLC
                   </p>
                 </td>
               </tr>

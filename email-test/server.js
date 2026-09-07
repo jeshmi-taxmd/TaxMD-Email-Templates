@@ -5,22 +5,26 @@ const path = require("path");
 require("dotenv").config();
 const app = express();
 app.use(express.json());
-app.use(express.json());
+
+// Test data for email-test/index.html (accept-invitation-fullaccess)
+const testData = {
+  inviter_name: "Pratik Poudel",
+  invitation_note:
+    "Hi Ketan, please review these plans and the questions I marked for discussion.",
+  invitation_expiry_days: "7",
+  collaboration_expiry_days: "10",
+  accept_link: "https://taxmd.com",
+  decline_link: "https://taxmd.com",
+  current_year: String(new Date().getFullYear()),
+};
 
 app.post("/send-test", async (req, res) => {
   try {
     let html = fs.readFileSync(path.join(__dirname, "index.html"), "utf8");
 
-    html = html
-      .replace(/{{first_name}}/g, "Preeti")
-      .replace(/{{expiry_date}}/g, "March 15, 2026")
-      .replace(/{{invoice_number}}/g, "1234567890")
-      .replace(
-        /{{upgrade_url}}/g,
-        "https://investorfriendlycpa.monday.com/boards/18395018809/views/234736140",
-      )
-      .replace(/{{current_year}}/g, new Date().getFullYear())
-      .replace(/{{amount_due}}/g, "$100");
+    for (const [key, value] of Object.entries(testData)) {
+      html = html.replaceAll(`{{${key}}}`, value);
+    }
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -32,8 +36,8 @@ app.post("/send-test", async (req, res) => {
 
     await transporter.sendMail({
       from: '"TaxMD Test" <' + process.env.EMAIL_USER + ">",
-      to: "ketan.maharjan11@gmail.com",
-      subject: "Test Email Template",
+      to: "ketan@taxmd.com",
+      subject: "Test Invitation For Collaboration",
       html,
     });
 
@@ -46,6 +50,17 @@ app.post("/send-test", async (req, res) => {
   }
 });
 
-app.listen(8000, () => {
+const server = app.listen(8000, () => {
   console.log("Server running on http://localhost:8000");
+});
+
+server.on("error", (err) => {
+  if (err.code === "EADDRINUSE") {
+    console.error(
+      "Port 8000 is already in use. Stop the other process first:\n  kill $(lsof -t -i:8000)",
+    );
+  } else {
+    console.error(err);
+  }
+  process.exit(1);
 });
